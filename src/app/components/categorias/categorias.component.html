@@ -1,0 +1,16 @@
+<h1>Formulario</h1>
+<form [formGroup]="signupForm" (ngSubmit)="enviar(signupForm.value )">
+    <label>Nombre</label>
+    <input formControlName="nombre" type="text">
+    <br />
+    <label>Apellido</label>
+    <input formControlName="apellido" type="text">
+    <br />
+    <label>Correo</label>
+    <input formControlName="correo" type="text">
+    <br />
+    <label>Telefono</label>
+    <input formControlName="telefono" type="text">
+    <br />
+    <button (click)="getQuery()" [disabled]="signupForm.invalid" type="submit">Enviar</button>
+</form>
